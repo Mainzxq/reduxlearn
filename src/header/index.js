@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { HeaderWrapper, AppBar } from './style'
+import { HeaderWrapper, AppBar,LogoName } from './style'
 class Header extends Component {
     render() {
         return (
             <HeaderWrapper>
     
                 <AppBar>
-                    SCCBA
+                    <LogoName>SCCBA</LogoName>     
                 </AppBar>
             </ HeaderWrapper>
         )
