@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import logoImg from '../statics/Logo'
 // 创建一个组件的样式和次级样式并且导出
 export const HeaderWrapper = styled.div`
     height:60px;
@@ -21,3 +22,9 @@ export const AppBar = styled.div`
     margin: 0 auto;
 
 `;
+
+export const Logo = styled.div`
+    padding: 0 15;
+    possition: absolute;
+    line-height: 56px
+`
