@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logoImg from '../statics/Logo'
+import logoImg from '../statics/Logo.png'
 // 创建一个组件的样式和次级样式并且导出
 export const HeaderWrapper = styled.div`
     height:60px;
