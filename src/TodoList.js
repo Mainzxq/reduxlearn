@@ -41,6 +41,7 @@ class TodoList extends Component {
         <div>
             <Header />
             <MainContentWrapper>
+                <>
                 <div style={{marginLeft:"10px", marginTop:"10px"}}>
                     <Input placeholder="Input your Todo Job" style={{width:"300px",
                      marginRight:"10px"}} value={ this.state.inputValue } 
