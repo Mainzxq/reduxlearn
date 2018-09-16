@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 
 injectGlobal`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -49,4 +49,15 @@ table {
  border-collapse: collapse;
  border-spacing: 0;
 }
-`
+`;
+
+export const MainContentWrapper = styled.div`
+    padding-Bottom: 15px;
+    position: relative;
+    top:10px;
+    width: 1080px;
+    margin: 0 auto;
+    border-radius:10;
+    border: 1px solid #eee ;
+
+`;
