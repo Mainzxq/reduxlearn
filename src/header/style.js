@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.div`
     height:60px;
     background:#002B69;
 
+
 `;
 
 export const AppBar = styled.div`
@@ -19,10 +20,20 @@ export const AppBar = styled.div`
     margin-bottom: 15px;
 
 `;
+export const Logoimg = styled.a`
+    position: absolute;
+    margin: 12px auto;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(${logoImg});
+    background-size: contain;
+`;
 
-export const LogoName = styled.div`
+export const LogoName = styled.a`
+    overflow:hidden;
     padding: 0 10;
-    possition: absolute;
+    position: relative;
     line-height: 56px
     margin:0 auto;
     margin-left:46px;
@@ -30,12 +41,33 @@ export const LogoName = styled.div`
     display: block;
     font-Size: 18;
     color: #fff;
+    float: left;
 `;
 
-export const InfoBan = styled.div`
-    line-height: 8px;
-    background: red,
-    margin: 0 0,
-    color: #fff,
+export const InfoBar = styled.a`
+    overflow:hidden;
+    line-height: 58px;
+    display: block;
+    margin:0px 15px;
 
+    width: 100px;
+    font-size: 14px;
+
+    &.left {
+        float: left;
+        color: #fff;
+    }
+
+    &.right {
+        float: right;
+        color: #fff;
+    }
+
+    &.active {
+        color: #ff9100;
+    }
+
+    &::hover {
+        color: #000;
+    }
 `;
