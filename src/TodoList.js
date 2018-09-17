@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import 'antd/dist/antd.css'
-import { Input, Button, List } from 'antd'
+import { Input, Button, List, Carousel} from 'antd'
 import Header from './header'
 import {MainContentWrapper} from './style'
 import store from './store' // create脚手架可以省去输入index.js的部分
 import { getInputChangeAction, getAddItemAction, getDeleteItemAction } from './store/actionCreaters';
+import styled from 'styled-components'
 
 
 // 1.安装 styled-components 个性化CSS
@@ -18,7 +19,19 @@ import { getInputChangeAction, getAddItemAction, getDeleteItemAction } from './s
 // 8.建立handleDeleteItem
 // 9.在store文件夹下建立actionType.js，格式化action的types，以常量代替字符串，利于排除bug
 // 10.使用actionCreater统一创建action
+const Slide = styled.div`
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
 
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+`
 
 class TodoList extends Component {
 
@@ -41,9 +54,17 @@ class TodoList extends Component {
         <div>
             <Header />
             <MainContentWrapper>
-                <>
+
+                <Slide style={{float:"left", marginLeft:"10px", marginTop:"10px",paddingBottom:"10px",width:"300px",height:"auto"}}>
+                    <Carousel vertical>
+                    <div><h3>1</h3></div>
+                    <div><h3>2</h3></div>
+                    <div><h3>3</h3></div>
+                    <div><h3>4</h3></div>
+                    </Carousel>
+                </Slide>
                 <div style={{marginLeft:"10px", marginTop:"10px"}}>
-                    <Input placeholder="Input your Todo Job" style={{width:"300px",
+                    <Input placeholder="Input your Todo Job" style={{width:"300px",marginLeft:"10px",
                      marginRight:"10px"}} value={ this.state.inputValue } 
                      onChange={this.handleInputValue}
                      />
@@ -51,7 +72,7 @@ class TodoList extends Component {
                 </div>
 
                 <List
-                    style={{marginTop:"10px",marginLeft:"10px", width:"300px"}}
+                    style={{float:"left",marginTop:"10px",marginLeft:"10px", width:"300px",background:"#fff"}}
                     bordered
                     dataSource={this.state.list}
                     renderItem={(item, index) =>(
@@ -65,7 +86,7 @@ class TodoList extends Component {
         
         )
     }
-    
+
     handleInputValue(e) {
         // console.log(e.target.value),可以看到事件对象中的值
         // 利用redux处理,在函数内写出action，然后dispatch回store，

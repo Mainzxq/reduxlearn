@@ -48,10 +48,11 @@ export const InfoBar = styled.a`
     overflow:hidden;
     line-height: 58px;
     display: block;
-    margin:0px 15px;
+    margin:0 15px;
 
     width: 100px;
     font-size: 14px;
+    text-align: center;
 
     &.left {
         float: left;
@@ -65,9 +66,13 @@ export const InfoBar = styled.a`
 
     &.active {
         color: #ff9100;
+        border-bottom: 2px solid;
+        padding-bottom: -5px;
+    }
+    &:hover {
+        color: #ff9100;
+        border-bottom: 2px solid;
+        padding-bottom: -5px;
     }
 
-    &::hover {
-        color: #000;
-    }
 `;

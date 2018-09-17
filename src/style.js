@@ -52,12 +52,14 @@ table {
 `;
 
 export const MainContentWrapper = styled.div`
+    overflow:hidden;
     padding-Bottom: 15px;
     position: relative;
     top:10px;
     width: 1080px;
     margin: 0 auto;
-    border-radius:10;
+    border-radius:4px;
     border: 1px solid #eee ;
+    background:rgba(99,99,99,.15);
 
 `;
