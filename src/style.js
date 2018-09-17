@@ -63,3 +63,11 @@ export const MainContentWrapper = styled.div`
     background:rgba(99,99,99,.15);
 
 `;
+
+export const OverrideList = styled.div`
+ &.override-ant-list-header {
+    :global(.ant-list-header) {
+      font-size: 20px;
+
+    }
+  }`;

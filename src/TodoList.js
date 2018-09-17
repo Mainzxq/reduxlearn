@@ -33,6 +33,16 @@ const Slide = styled.div`
 }
 `
 
+const data = [
+        'Racing car sprays burning fuel into crowd.',
+        'Japanese princess to wed commoner.',
+        'Australian walks 100km after outback crash.',
+        'Man charged over missing wedding girl.',
+        'Los Angeles battles huge wildfires.',
+        ]
+
+
+
 class TodoList extends Component {
 
     constructor(props) {
@@ -63,6 +73,20 @@ class TodoList extends Component {
                     <div><h3>4</h3></div>
                     </Carousel>
                 </Slide>
+
+                <List
+                    header="公司要闻"
+                    style={{float:"left",marginTop:"10px",marginLeft:"10px", 
+                        width:"300px",background:"#fff"}} 
+                    dataSource={data}
+                    bordered
+                    split = {false}
+                    renderItem={(item, index)=>(
+                        <List.Item split = {false}>{item}</List.Item>
+                    )}>
+
+                </List>
+
                 <div style={{marginLeft:"10px", marginTop:"10px"}}>
                     <Input placeholder="Input your Todo Job" style={{width:"300px",marginLeft:"10px",
                      marginRight:"10px"}} value={ this.state.inputValue } 
