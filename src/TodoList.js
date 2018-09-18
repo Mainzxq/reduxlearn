@@ -6,6 +6,8 @@ import {MainContentWrapper} from './style'
 import store from './store' // create脚手架可以省去输入index.js的部分
 import { getInputChangeAction, getAddItemAction, getDeleteItemAction } from './store/actionCreaters';
 import styled from 'styled-components'
+import NewsList from './components/NewsList/NewsList';
+
 
 
 // 1.安装 styled-components 个性化CSS
@@ -73,19 +75,7 @@ class TodoList extends Component {
                     <div><h3>4</h3></div>
                     </Carousel>
                 </Slide>
-
-                <List
-                    header="公司要闻"
-                    style={{float:"left",marginTop:"10px",marginLeft:"10px", 
-                        width:"300px",background:"#fff"}} 
-                    dataSource={data}
-                    bordered
-                    split = {false}
-                    renderItem={(item, index)=>(
-                        <List.Item split = {false}>{item}</List.Item>
-                    )}>
-
-                </List>
+                <NewsList></NewsList>
 
                 <div style={{marginLeft:"10px", marginTop:"10px"}}>
                     <Input placeholder="Input your Todo Job" style={{width:"300px",marginLeft:"10px",
