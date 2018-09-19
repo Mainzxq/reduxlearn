@@ -7,6 +7,7 @@ import store from './store' // create脚手架可以省去输入index.js的部�
 import { getInputChangeAction, getAddItemAction, getDeleteItemAction } from './store/actionCreaters';
 import styled from 'styled-components'
 import NewsList from './components/NewsList/NewsList';
+import p1 from "./statics/223.png"
 
 
 
@@ -23,8 +24,8 @@ import NewsList from './components/NewsList/NewsList';
 // 10.使用actionCreater统一创建action
 const Slide = styled.div`
 .ant-carousel .slick-slide {
+  
   text-align: center;
-  height: 160px;
   line-height: 160px;
   background: #364d79;
   overflow: hidden;
@@ -67,9 +68,9 @@ class TodoList extends Component {
             <Header />
             <MainContentWrapper>
 
-                <Slide style={{float:"left", marginLeft:"10px", marginTop:"10px",paddingBottom:"10px",width:"300px",height:"auto"}}>
-                    <Carousel vertical>
-                    <div><h3>1</h3></div>
+                <Slide style={{float:"left", marginLeft:"16px", marginTop:"16px",width:"300px"}}>
+                    <Carousel vertical >
+                    <div><img src={p1} alt="1"></img></div>
                     <div><h3>2</h3></div>
                     <div><h3>3</h3></div>
                     <div><h3>4</h3></div>

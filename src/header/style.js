@@ -17,7 +17,7 @@ export const AppBar = styled.div`
     height: 100%;
     width: 1080px;
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
 `;
 export const Logoimg = styled.a`
